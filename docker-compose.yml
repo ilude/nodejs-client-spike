@@ -1,0 +1,12 @@
+version: '2.4'
+services:
+  alpine-node-tor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: alpine-node-tor
+    container_name: alpine-node-tor
+    restart: unless-stopped
+    volumes:
+      - ./app:/app
+    command: bash -l
